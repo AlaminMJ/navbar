@@ -10,3 +10,74 @@
 html{
     scroll-behavior: smooth;
 }
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    height: 3rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+.header .nav{
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+   align-items: center;
+    display: flex;
+    background-color: rgb(4, 98, 204);
+    justify-content: space-between;
+}
+.header .nav .logo a{
+    color: #fff;
+    font-size: 22px;
+}
+.header .nav .nav-menu .nav-list{
+    display: flex;
+    column-gap: 40px;
+  
+}
+.header .nav .nav-menu .nav-link{
+    color: #fff;
+    font-size: 16px;
+}
+.navbar-toggle{
+    display: none;
+}
+
+@media (max-width:765px) {
+
+        .header .nav .nav-menu .nav-list{
+            position: fixed;
+            flex-direction: column;
+            top: 3rem;
+            height: 100%;
+            left: -100%;
+            width: 80%;
+            background-color: azure;
+            padding: 2rem;
+        }
+
+        .header .nav .nav-menu .nav-item{
+            margin-bottom: 25px;
+        }
+        .header .nav .nav-menu .nav-link{
+            color: rgb(75, 75, 75);
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .navbar-toggle:hover .header .nav .nav-menu .nav-list{
+            left: 0;
+        }
+
+        .navbar-toggle{
+            display: block;
+        }
+}
